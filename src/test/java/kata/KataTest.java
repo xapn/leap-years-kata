@@ -29,22 +29,22 @@ import static testasyouthink.TestAsYouThink.resultOf;
 class KataTest {
 
     @Test
-    void should_find_a_common_year_given_2019() {
+    void should_find_a_common_year_given_2019_as_not_divisible_by_4() {
         resultOf(() -> isLeapYear(2019)).isFalse();
     }
 
     @Test
-    void should_find_a_leap_year_given_2008() {
+    void should_find_a_leap_year_given_2008_as_divisible_by_4_but_not_100() {
         resultOf(() -> isLeapYear(2008)).isTrue();
     }
 
     @Test
-    void should_find_a_leap_year_given_2016() {
+    void should_find_a_leap_year_given_2016_as_divisible_by_4_but_not_100() {
         resultOf(() -> isLeapYear(2016)).isTrue();
     }
 
     @Test
-    void should_find_a_common_year_given_1900() {
+    void should_find_a_common_year_given_1900_as_divisible_by_4_and_100() {
         resultOf(() -> isLeapYear(1900)).isFalse();
     }
 
