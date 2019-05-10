@@ -54,10 +54,14 @@ class KataTest {
     }
 
     boolean isLeapYear(int year) {
-        return isDivisibleBy4ButNot100(year) || year % 400 == 0;
+        return isDivisibleBy4ButNot100(year) || isDivisibleBy400(year);
     }
 
     private boolean isDivisibleBy4ButNot100(int year) {
         return year % 4 == 0 && year % 100 != 0;
+    }
+
+    private boolean isDivisibleBy400(int year) {
+        return year % 400 == 0;
     }
 }
