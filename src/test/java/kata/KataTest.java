@@ -30,11 +30,15 @@ class KataTest {
 
     @Test
     void should_find_a_common_year_given_2019() {
-        resultOf(() -> isLeapYear()).isFalse();
+        resultOf(() -> isLeapYear(2019)).isFalse();
     }
 
-    boolean isLeapYear() {
-        int year = 2019;
-        return false;
+    @Test
+    void should_find_a_leap_year_given_2008() {
+        resultOf(() -> isLeapYear(2008)).isTrue();
+    }
+
+    boolean isLeapYear(int year) {
+        return year == 2008;
     }
 }
