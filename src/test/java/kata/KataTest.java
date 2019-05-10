@@ -43,7 +43,12 @@ class KataTest {
         resultOf(() -> isLeapYear(2016)).isTrue();
     }
 
+    @Test
+    void should_find_a_common_year_given_1900() {
+        resultOf(() -> isLeapYear(1900)).isFalse();
+    }
+
     boolean isLeapYear(int year) {
-        return year % 4 == 0;
+        return year % 4 == 0 && year % 100 != 0;
     }
 }
