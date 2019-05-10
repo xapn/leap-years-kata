@@ -13,7 +13,11 @@ public class Year {
     }
 
     private boolean isDivisibleBy4ButNot100() {
-        return year % 4 == 0 && year % 100 != 0;
+        return year % 4 == 0 && isNotBeginningOfCentury();
+    }
+
+    private boolean isNotBeginningOfCentury() {
+        return year % 100 != 0;
     }
 
     private boolean isDivisibleBy400() {
