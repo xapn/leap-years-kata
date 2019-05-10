@@ -30,38 +30,47 @@ class KataTest {
 
     @Test
     void should_find_a_common_year_given_2019_as_not_divisible_by_4() {
-        resultOf(() -> isLeapYear(2019)).isFalse();
+        resultOf(() -> new Year(2019).isLeap()).isFalse();
     }
 
     @Test
     void should_find_a_leap_year_given_2008_as_divisible_by_4_but_not_100() {
-        resultOf(() -> isLeapYear(2008)).isTrue();
+        resultOf(() -> new Year(2008).isLeap()).isTrue();
     }
 
     @Test
     void should_find_a_leap_year_given_2016_as_divisible_by_4_but_not_100() {
-        resultOf(() -> isLeapYear(2016)).isTrue();
+        resultOf(() -> new Year(2016).isLeap()).isTrue();
     }
 
     @Test
     void should_find_a_common_year_given_1900_as_divisible_by_4_and_100() {
-        resultOf(() -> isLeapYear(1900)).isFalse();
+        resultOf(() -> new Year(1900).isLeap()).isFalse();
     }
 
     @Test
     void should_find_a_leap_year_given_2000_as_divisible_by_400() {
-        resultOf(() -> isLeapYear(2000)).isTrue();
+        resultOf(() -> new Year(2000).isLeap()).isTrue();
     }
 
-    boolean isLeapYear(int year) {
-        return isDivisibleBy4ButNot100(year) || isDivisibleBy400(year);
-    }
+    public static class Year {
 
-    private boolean isDivisibleBy4ButNot100(int year) {
-        return year % 4 == 0 && year % 100 != 0;
-    }
+        private int year;
 
-    private boolean isDivisibleBy400(int year) {
-        return year % 400 == 0;
+        public Year(int year) {
+            this.year = year;
+        }
+
+        public boolean isLeap() {
+            return isDivisibleBy4ButNot100() || isDivisibleBy400();
+        }
+
+        private boolean isDivisibleBy4ButNot100() {
+            return year % 4 == 0 && year % 100 != 0;
+        }
+
+        private boolean isDivisibleBy400() {
+            return year % 400 == 0;
+        }
     }
 }
