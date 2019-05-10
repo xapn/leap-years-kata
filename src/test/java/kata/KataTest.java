@@ -48,8 +48,13 @@ class KataTest {
         resultOf(() -> isLeapYear(1900)).isFalse();
     }
 
+    @Test
+    void should_find_a_leap_year_given_2000_as_divisible_by_400() {
+        resultOf(() -> isLeapYear(2000)).isTrue();
+    }
+
     boolean isLeapYear(int year) {
-        return isDivisibleBy4ButNot100(year);
+        return isDivisibleBy4ButNot100(year) || year % 400 == 0;
     }
 
     private boolean isDivisibleBy4ButNot100(int year) {
