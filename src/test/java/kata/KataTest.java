@@ -30,9 +30,11 @@ class KataTest {
 
     @Test
     void should_find_a_common_year_given_2019() {
-        resultOf(() -> {
-            int year = 2019;
-            return false;
-        }).isFalse();
+        resultOf(() -> isLeapYear()).isFalse();
+    }
+
+    boolean isLeapYear() {
+        int year = 2019;
+        return false;
     }
 }
