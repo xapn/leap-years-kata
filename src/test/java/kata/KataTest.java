@@ -24,29 +24,15 @@ package kata;
 
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static testasyouthink.TestAsYouThink.givenSut;
 import static testasyouthink.TestAsYouThink.resultOf;
-import static testasyouthink.TestAsYouThink.when;
 
 class KataTest {
 
     @Test
-    void should_behave_given_context() {
-        // Choose the proper syntax for your test case.
-
-        resultOf(() -> "TestAsYouThink").isEqualTo("TestAsYouThink");
-
-        when(() -> "TestAsYouThink").then(result -> {
-            assertThat(result)
-                    .startsWith("Test")
-                    .hasSize(14);
-        });
-
-        givenSut(StringBuilder::new)
-                .whenSutRuns(sut -> sut
-                        .append("TestAsYouThink")
-                        .reverse())
-                .then(sut -> assertThat(sut).containsSequence("knihTuoYsAtseT"));
+    void should_find_a_common_year_given_2019() {
+        resultOf(() -> {
+            int year = 2019;
+            return false;
+        }).isFalse();
     }
 }
