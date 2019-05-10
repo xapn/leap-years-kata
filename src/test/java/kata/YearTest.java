@@ -26,7 +26,7 @@ import org.junit.jupiter.api.Test;
 
 import static testasyouthink.TestAsYouThink.resultOf;
 
-class KataTest {
+class YearTest {
 
     @Test
     void should_find_a_common_year_given_2019_as_not_divisible_by_4() {
@@ -51,26 +51,5 @@ class KataTest {
     @Test
     void should_find_a_leap_year_given_2000_as_divisible_by_400() {
         resultOf(() -> new Year(2000).isLeap()).isTrue();
-    }
-
-    public static class Year {
-
-        private int year;
-
-        public Year(int year) {
-            this.year = year;
-        }
-
-        public boolean isLeap() {
-            return isDivisibleBy4ButNot100() || isDivisibleBy400();
-        }
-
-        private boolean isDivisibleBy4ButNot100() {
-            return year % 4 == 0 && year % 100 != 0;
-        }
-
-        private boolean isDivisibleBy400() {
-            return year % 400 == 0;
-        }
     }
 }
