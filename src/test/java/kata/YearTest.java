@@ -24,29 +24,32 @@ package kata;
 
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static testasyouthink.TestAsYouThink.givenSut;
 import static testasyouthink.TestAsYouThink.resultOf;
-import static testasyouthink.TestAsYouThink.when;
 
-class KataTest {
+class YearTest {
 
     @Test
-    void should_behave_given_context() {
-        // Choose the proper syntax for your test case.
+    void should_find_a_common_year_given_2019_as_not_divisible_by_4() {
+        resultOf(() -> new Year(2019).isLeap()).isFalse();
+    }
 
-        resultOf(() -> "TestAsYouThink").isEqualTo("TestAsYouThink");
+    @Test
+    void should_find_a_leap_year_given_2008_as_divisible_by_4_but_not_100() {
+        resultOf(() -> new Year(2008).isLeap()).isTrue();
+    }
 
-        when(() -> "TestAsYouThink").then(result -> {
-            assertThat(result)
-                    .startsWith("Test")
-                    .hasSize(14);
-        });
+    @Test
+    void should_find_a_leap_year_given_2016_as_divisible_by_4_but_not_100() {
+        resultOf(() -> new Year(2016).isLeap()).isTrue();
+    }
 
-        givenSut(StringBuilder::new)
-                .whenSutRuns(sut -> sut
-                        .append("TestAsYouThink")
-                        .reverse())
-                .then(sut -> assertThat(sut).containsSequence("knihTuoYsAtseT"));
+    @Test
+    void should_find_a_common_year_given_1900_as_divisible_by_4_and_100() {
+        resultOf(() -> new Year(1900).isLeap()).isFalse();
+    }
+
+    @Test
+    void should_find_a_leap_year_given_2000_as_divisible_by_400() {
+        resultOf(() -> new Year(2000).isLeap()).isTrue();
     }
 }
