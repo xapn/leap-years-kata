@@ -1,6 +1,16 @@
-# Code Kata: \<name it\>
+# Code Kata: Leap Years
 
-What code kata do you choose to solve today? Explain the game rules here. Please keep explanations below about the boilerplate as it is.
+## A little history
+
+Prior to 1582, the [Julian Calendar](https://en.wikipedia.org/wiki/Julian_calendar) was in wide use and defined leap years as every year divisible by 4. However, it was found in the late 16th century that the calendar year had drifted from the solar year by approximately 10 days. The [Gregorian Calendar](https://en.wikipedia.org/wiki/Gregorian_calendar) was defined in order to thin out the number of leap years and to more closely align the calendar year with the solar year. It was adopted in Papal countries on October 15, 1582, skipping 10 days from the Julian Calendar date. Protestant countries adopted the Gregorian Calendar after some time.
+
+The Gregorian Calendar is quite accurate, but could be made more accurate by adding an additional rule that eliminates years divisible by 4000 as leap years.
+
+Source: [CodingDojo.org](http://codingdojo.org)
+
+## Topic
+
+Write a function that returns true or false depending on whether its input integer is a leap year or not. A leap year is defined as one that is divisible by 4, but is not otherwise divisible by 100 unless it is also divisible by 400. For example, 2019 is a typical common year and 1996 is a typical leap year, whereas 1900 is an atypical common year and 2000 is an atypical leap year.
 
 # Code Kata Boilerplate for Java 8
 
