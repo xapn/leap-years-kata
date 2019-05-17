@@ -1,5 +1,12 @@
 # Code Kata: Leap Years
 
+[![LoC](https://tokei.rs/b1/github/xapn/leap-years-kata?category=code)](https://github.com/xapn/leap-years-kata)
+[![Files](https://tokei.rs/b1/github/xapn/leap-years-kata?category=files)](https://github.com/xapn/leap-years-kata)
+[![Total lines](https://tokei.rs/b1/github/xapn/leap-years-kata?category=lines)](https://github.com/xapn/leap-years-kata)
+[![Comments](https://tokei.rs/b1/github/xapn/leap-years-kata?category=comments)](https://github.com/xapn/leap-years-kata)
+[![Blank lines](https://tokei.rs/b1/github/xapn/leap-years-kata?category=blanks)](https://github.com/xapn/leap-years-kata)
+[![TestAsYouThink badge](https://img.shields.io/badge/Tests%20as%20first--class%20citizens%20with-TestAsYouThink-brightgreen.svg)](https://testasyouthink.org)
+
 ## A little history
 
 Prior to 1582, the [Julian Calendar](https://en.wikipedia.org/wiki/Julian_calendar) was in wide use and defined leap years as every year divisible by 4. However, it was found in the late 16th century that the calendar year had drifted from the solar year by approximately 10 days. The [Gregorian Calendar](https://en.wikipedia.org/wiki/Gregorian_calendar) was defined in order to thin out the number of leap years and to more closely align the calendar year with the solar year. It was adopted in Papal countries on October 15, 1582, skipping 10 days from the Julian Calendar date. Protestant countries adopted the Gregorian Calendar after some time.
